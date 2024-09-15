@@ -1,0 +1,435 @@
+* {
+    background-color: #ededed;
+    font-family: "Quicksand", sans-serif;
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+  }
+  
+  /* Home */
+  
+  /* Universell kod för alla länkar */
+  a {
+    text-decoration: none;
+    color: black;
+  }
+  
+  /* kod för navbar och container som wrappar allting */
+  .h-container {
+    display: flex;
+    height: 100%;
+    width: 100%;
+    text-align: center;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+  .h-main {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    width: 100%;
+    height: 100vh;
+  }
+  .navbar ul {
+    display: flex;
+    flex-direction: column;
+    text-decoration: none;
+    list-style-type: none;
+    gap: 60px;
+    height: 100vh;
+    width: 300px;
+    border-right: 1px solid black;
+    align-items: center;
+    font-weight: 500;
+    font-size: 1.2rem;
+  }
+  
+  .nav-spacer {
+    margin-top: 15%;
+    text-decoration: none;
+    list-style-type: none;
+  }
+  
+  .nav-hover:hover {
+    border-radius: 25px;
+    border: 1px solid black;
+    transition: 0.5s;
+    padding: 10px;
+  }
+  .navbar h1 {
+    display: flex;
+    border-right: 1px solid black;
+    width: 300px;
+    justify-content: center;
+    border-bottom: 1px solid black;
+    font-size: 2rem;
+    letter-spacing: 5px;
+  }
+  .navbar span {
+    color: rgb(200, 200, 66);
+  }
+  
+  /* kod för grid och logo */
+  
+  .h-parent {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    grid-template-rows: repeat(3, 1fr);
+    grid-column-gap: 20px;
+    grid-row-gap: 20px;
+    width: 70%;
+    height: 70%;
+    margin-top: 10%;
+  }
+  
+  .div1,
+  .div2,
+  .div3,
+  .div4 {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    overflow: hidden;
+    position: relative;
+    border-radius: 10px;
+    box-shadow: 2px 2px 10px 2px;
+  }
+  
+  .h-stockholmpic,
+  .h-jorden,
+  .h-bil,
+  .h-arena {
+    width: 100%;
+    max-height: 100%;
+    display: block;
+    object-fit: fill;
+  }
+  
+  .div1 {
+    grid-area: 1 / 1 / 3 / 2;
+    background-color: black;
+  }
+  .div2 {
+    grid-area: 1 / 2 / 2 / 3;
+    background-color: black;
+  }
+  .div3 {
+    grid-area: 2 / 2 / 3 / 3;
+    background-color: black;
+  }
+  .div4 {
+    grid-area: 3 / 1 / 4 / 3;
+    background-color: black;
+  }
+  
+  .h-logo {
+    color: rgb(200, 200, 66);
+    font-size: 5rem;
+    animation: rotate 3s linear infinite;
+  }
+  
+  /* kod för footern */
+  
+  .footerbottom {
+    margin-left: 300px;
+    border-left: 1px solid black;
+    border-top: 1px solid black;
+    list-style-type: none;
+  }
+  
+  .footerhover,
+  .footercontainer {
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+    list-style-type: none;
+    margin-bottom: 15px;
+    margin-top: 15px;
+    font-size: 1.3rem;
+  }
+  
+  .footerhover:hover {
+    color: darkgrey;
+    transition: 0.3s;
+  }
+  /* kod för animationen vid startsida */
+  
+  @keyframes rotate {
+    0% {
+      transform: rotate(0deg);
+    }
+    100% {
+      transform: rotate(360deg);
+    }
+  }
+  
+  /* media queries nedan för att fixa sidan responsive vid olika storlekar */
+  
+  @media (max-width: 1075px) {
+    .navbar {
+      display: none;
+    }
+    .footerbottom {
+      margin-top: 30px;
+      margin-left: 0px;
+      border-left: none;
+    }
+  }
+  
+  @media (max-width: 768px) {
+    .h-parent {
+      display: flex;
+      flex-direction: column;
+      gap: 50px;
+      height: 100%;
+    }
+    .h-logo {
+      margin-top: 100px;
+    }
+    .h-main {
+      height: auto;
+    }
+  }
+  
+  /* Explore */
+  
+  /* Profile */
+  .p-container {
+    display: flex;
+  }
+  
+  .p-main {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    width: 100%;
+    height: 100vh;
+  }
+  
+  .p-login {
+    border: 2px solid black;
+    width: 60%;
+    height: 50%;
+    padding: 80px;
+    box-sizing: border-box;
+  }
+  
+  .p-login .p-h1 {
+    text-align: center;
+  }
+  
+  .p-h1 {
+    font-size: 36px;
+    margin-bottom: 20px;
+    margin-top: 0;
+  }
+  
+  .p-input-box {
+    border-width: 100%;
+    display: flex;
+    align-items: center;
+  }
+  
+  .p-input-box input {
+    width: 100%;
+    padding: 5px;
+    font-size: 1rem;
+  }
+  
+  .p-login .p-input-box {
+    display: flex;
+    justify-content: center;
+    padding: 3px;
+  }
+  
+  .p-checkbox-lösen {
+    display: flex;
+    justify-content: center;
+    gap: 10px;
+    margin-top: 5px;
+  }
+  
+  .p-submit {
+    display: flex;
+    justify-content: center;
+    margin-bottom: 5px;
+    margin-top: 5px;
+  }
+  
+  .p-submit input {
+    width: 20%;
+    padding: 2px;
+    font-size: 1rem;
+    box-sizing: border-box;
+  }
+  
+  .p-reg {
+    display: flex;
+    justify-content: center;
+    gap: 10px;
+  }
+  
+  .p-lösen:hover {
+    color: rgb(115, 107, 107);
+  }
+  
+  .p-registrera:hover {
+    color: rgb(115, 107, 107);
+  }
+  
+  /* input-box-2 */
+  .r-input-box-2 {
+    border-width: 100%;
+    display: flex;
+    align-items: center;
+    margin-left: 16px;
+  }
+  
+  .r-input-box-2 input {
+    width: 100%;
+    padding: 5px;
+    font-size: 1rem;
+  }
+  
+  .p-login .r-input-box-2 {
+    display: flex;
+    justify-content: center;
+    padding: 3px;
+  }
+  
+  /* footer */
+  .footerbottom {
+    margin-left: 300px;
+    border-left: 1px solid black;
+    border-top: 1px solid black;
+    list-style-type: none;
+  }
+  
+  .footerhover,
+  .footercontainer {
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+    list-style-type: none;
+    margin-bottom: 15px;
+    margin-top: 15px;
+    font-size: 1.3rem;
+    /* margin-left: 300px; */
+  }
+  
+  /* hover färg och transition för lite stil */
+  .footerhover:hover {
+    color: rgb(104, 102, 102);
+    transition: 0.3s;
+    /* slut på footer */
+  }
+  
+  .main-container {
+    display: flex;
+  }
+  
+  .navbar {
+    width: 300px;
+    display: flex;
+    flex-direction: column;
+  }
+  
+  /* explore, flex och media query för mobilanpassning */
+  
+  .e-main {
+    display: flex;
+    padding: 10px;
+    margin: 10px;
+  }
+  
+  /* bl.a wrap för att sätta bilderna i ordning, centrera innehåll med flex och justify/align */
+  .e-flex-container {
+    display: flex;
+    gap: 20px;
+    flex-direction: row;
+    align-items: center;
+    justify-content: center;
+    flex-wrap: wrap;
+  }
+  
+  /* Det här är bl.a för border radius och för att kunna selecta och stylea bilderna */
+  .tile img {
+    height: 100%;
+    width: 100%;
+    border-radius: 12px;
+    box-shadow: 5px 2px 5px gray;
+    object-fit: fill;
+  }
+  
+  .maintile {
+    max-width: 300px;
+  }
+  
+  /* media query för att stylea till kolumn när man t.ex kollar på mobilen. även lagt till så att margin-left och border-left försvinner vid 700px */
+  
+  @media (max-width: 768px) {
+    .e-flex-container {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      height: 100%;
+      width: 100%;
+      flex-direction: column;
+    }
+  
+    .navbar {
+      display: none;
+    }
+  
+    .footerbottom {
+      margin-left: 0;
+      border-left: none;
+    }
+  }
+  
+  .footerhover:hover {
+    color: darkgrey;
+    transition: 0.3s;
+  }
+  
+  /* Media Query för att hantera smalare skärmar, t.ex. på 768px */
+  @media (max-width: 768px) {
+    .p-container {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      height: 100vh;
+      width: 100vw;
+    }
+    .p-login {
+      width: 100%;
+      padding: 0;
+    }
+  
+    .p-h1 {
+      font-size: 36px;
+    }
+  
+    .p-submit input {
+      font-size: 1rem;
+    }
+  
+    .p-input-box input {
+      font-size: 0.9rem;
+    }
+  }
+  @media (max-width: 768px) {
+    .navbar {
+      display: none;
+    }
+    .footerbottom {
+      justify-content: center;
+      align-items: center;
+      margin-left: 0;
+      border-left: none;
+    }
+  }
+  
